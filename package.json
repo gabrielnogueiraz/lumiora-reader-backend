@@ -8,7 +8,9 @@
     "knex": "^3.1.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+    "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.20",
     "zod": "^3.24.2"
   },
   "name": "pdf-reader-backend",
@@ -19,9 +21,7 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir dist",
     "start": "node dist/server.js",
-    "knex:migrate": "knex --knexfile src/database/knexfile.ts migrate:latest",
-    "knex:migrate:rollback": "knex --knexfile src/database/knexfile.ts migrate:rollback",
-    "postinstall": "npm run knex:migrate"
+    "typeorm": "typeorm-ts-node-commonjs"
   },
   "keywords": [],
   "author": "",
@@ -31,7 +31,6 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/jsonwebtoken": "^9.0.9",
-    "@types/knex": "^0.15.2",
     "@types/morgan": "^1.9.9",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.13.5",
