@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, OneToMany } from "typeorm";
-import { User } from "./user";
+import { User } from "./User";
 import { Favorite } from "./Favorite";
 
 @Entity('books')
@@ -7,13 +7,13 @@ export class Book {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
 
-    @Column()
+    @Column({ type: 'varchar' })
     title!: string;
 
-    @Column({ nullable: true })
+    @Column({ type: 'varchar', nullable: true })
     author?: string;
 
-    @Column()
+    @Column({ type: 'varchar' })
     filePath!: string;
 
     @CreateDateColumn()
