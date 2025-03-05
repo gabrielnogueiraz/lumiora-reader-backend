@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne } from "typeorm";
-import { User } from "./user";
+import { User } from "./User";
 import { Book } from "./Book";
 
 @Entity('favorites')
